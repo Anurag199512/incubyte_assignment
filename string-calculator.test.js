@@ -35,3 +35,22 @@ test('test case scenario with multiple numbers (set 1) with new line character a
 test('test case scenario with multiple numbers (set 2) with new line character as delimiter', () => {
   expect(stringCalculator('10\n2,30\n4\n50,6')).toBe(102);
 });
+
+test('test case scenario with multiple numbers (set 1) with ; delimiter', () => {
+  expect(stringCalculator('//;1\n2;3\n4;5\n6')).toBe(21);
+});
+
+
+test('test case scenario with multiple numbers (set 2) with "A" as delimiter', () => {
+  expect(stringCalculator('//A\n10A2A30\n4\n50A6')).toBe(102);
+});
+
+
+// failure cases not supported
+// test('case with "A" as delimiter but  (input format wrong)', () => {
+//   expect(stringCalculator('/A\n10A2A30\n4\n50A6')).toBe(102);
+// });
+
+// test('case with multiple delimiters', () => {
+//   expect(stringCalculator('1,2,3;4#5$6')).toBe(21);
+// });

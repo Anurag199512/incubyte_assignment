@@ -3,8 +3,11 @@ export function stringCalculator(input) {
 
   const delimiter = identifyDelimiter(input);
 
+  // check if external adhoc delimiter is provided
+  input = trimInputIfDelimiterIsDynamic(input);
+
   // replace new line delimiter with a common delimiter
-  input = input.replace(/\n/g, ",");
+  input = input.replace(/\n/g, delimiter);
   
   const numbers = input.split(`${delimiter}`);
 
@@ -36,4 +39,12 @@ function identifyDelimiter(input) {
   }
 
   return delimiter;
+}
+
+function trimInputIfDelimiterIsDynamic(input) {
+  if (input.startsWith('//') && input[2]) {
+    return input.slice(3);
+  }
+
+  return input;
 }
