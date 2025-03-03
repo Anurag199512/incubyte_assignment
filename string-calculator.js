@@ -1,7 +1,12 @@
 export function stringCalculator(input) {
   if (!input || !input.length) return 0;
 
-  const numbers = input.split(',');
+  const delimiter = identifyDelimiter(input);
+
+  // replace new line delimiter with a common delimiter
+  input = input.replace(/\n/g, ",");
+  
+  const numbers = input.split(`${delimiter}`);
 
   let sum = 0 ;
   const negativeNumbersList = [];
@@ -21,4 +26,14 @@ export function stringCalculator(input) {
   }
 
   return sum;
+}
+
+function identifyDelimiter(input) {
+  let delimiter = ',';
+
+  if (input.startsWith('//') && input[2]) {
+    delimiter = input[2];
+  }
+
+  return delimiter;
 }
