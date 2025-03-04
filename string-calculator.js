@@ -1,4 +1,4 @@
-export function stringCalculator(input) {
+export function add(input) {
   if (!input || !input.length) return 0;
 
   const delimiter = identifyDelimiter(input);
@@ -25,7 +25,7 @@ export function stringCalculator(input) {
   }
 
   if (negativeNumbersList.length > 0) {
-    throw new Error(`Negative numbers not allowed such as ${negativeNumbersList.join(',')}`);
+    throw new Error(`negative numbers not allowed ${negativeNumbersList.join(',')}`);
   }
 
   return sum;
@@ -48,3 +48,5 @@ function trimInputIfDelimiterIsDynamic(input) {
 
   return input;
 }
+
+console.log(add('//;\n1;2'))
