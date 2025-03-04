@@ -17,7 +17,8 @@
     "url": "https://github.com/Anurag199512/incubyte_assignment/issues"
   },
   "homepage": "https://github.com/Anurag199512/incubyte_assignment#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "jest": "^29.7.0"
   }
 }
