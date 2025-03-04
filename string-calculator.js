@@ -28,6 +28,8 @@ export function add(input) {
     throw new Error(`negative numbers not allowed ${negativeNumbersList.join(',')}`);
   }
 
+  if (isNaN(sum)) return 0;
+
   return sum;
 }
 
@@ -48,3 +50,6 @@ function trimInputIfDelimiterIsDynamic(input) {
 
   return input;
 }
+
+const input = '\/1,2,3';
+console.log(add(input));
