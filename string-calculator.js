@@ -48,5 +48,3 @@ function trimInputIfDelimiterIsDynamic(input) {
 
   return input;
 }
-
-console.log(add('//;\n1;2'))
