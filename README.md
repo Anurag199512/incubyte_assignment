@@ -15,5 +15,5 @@
 ## Assumptions Made
 
 1. Only one dynamic delimiter will be provided in input in addition to the "\n".
-2. Length of delimiter is always 1. For ex we cannot have a delimiter such "--", "++", "###" etc.
-3. If while provided dynamic delimiter input is not given in the specified format then output returned will be 0.
+2. Length of dynamic delimiter is always 1. For ex we cannot have a delimiter such "--", "++", "###" etc.
+3. If while providing dynamic delimiter input is not given in the specified format then output returned will be 0.
